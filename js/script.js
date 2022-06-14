@@ -18,18 +18,15 @@ console.log(bombs);
 // Altrimenti il gioco va avanti a meno di aver raggiunto il numero massimo di tentativi possibili. In questo caso il gioco finisce con un messaggio di vittoria.
 for(let i = 1; i < (userDifficulty - bombs.length); i++){
     let userChoice = parseInt(prompt("inserisci un numero da scoprire!"));
+    // Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha scelto un numero che non era una bomba.
     if(bombs.includes(userChoice)){
         alert(`hai fatto scoppiare una bomba dopo ${i} tentativi!`);
         break
-    }else if(i === 83){
+    }else if(i === (userDifficulty - bombs.length)){
         alert("hai vinto!");
     }
 }
 
-
-
-
-// Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha scelto un numero che non era una bomba.
 function userInput(){
     while(userCheck === false){
         let userChoice = parseInt(prompt("inserisci il livello di difficoltà(1-2-3)"));
