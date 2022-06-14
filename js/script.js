@@ -22,7 +22,7 @@ for(let i = 1; i < (userDifficulty - bombs.length); i++){
     if(bombs.includes(userChoice)){
         alert(`hai fatto scoppiare una bomba dopo ${i} tentativi!`);
         break
-    }else if(i === (userDifficulty - bombs.length)){
+    }else if(i === (userDifficulty - bombs.length) - 1){
         alert("hai vinto!");
     }
 }
